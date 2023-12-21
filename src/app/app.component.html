@@ -1,0 +1,31 @@
+<div *ngIf="!isWelcomePage" >
+  <app-text-box></app-text-box>
+</div>
+
+<!-- <app-welcome-page></app-welcome-page> -->
+<div *ngIf="!isUsersPage">
+  <mat-tab-group >
+    <mat-tab label="Welcome">
+      
+
+
+
+
+
+
+
+
+    </mat-tab>
+    <mat-tab label="Manage Jobs"> <app-text-box></app-text-box> </mat-tab>
+
+    <mat-tab label="Manage Users"><app-manage-users></app-manage-users></mat-tab>
+  </mat-tab-group>
+
+</div>
+
+
+<div *ngIf="isUsersPage">
+  <button mat-raised-button color="primary" (click)="goBack()">Go Back</button>
+
+  
+</div>

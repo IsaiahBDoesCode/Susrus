@@ -1,0 +1,22 @@
+<div>
+<strong>Lawn Care Job Details:</strong>
+    <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Lot Acerage</mat-label>
+          <input matInput [(ngModel)]="firstName" name="firstName">
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+            <mat-label>Priority</mat-label>
+            <mat-select >
+              <mat-option *ngFor="let jobPriority of jobPriority" [value]="jobPriority.value">
+                {{jobPriority.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    
+          <div> <button (click)="loadDataToModal()" mat-raised-button color="primary">Submit</button>
+
+      </div>
+    
+</div>
